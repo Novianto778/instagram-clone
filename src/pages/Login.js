@@ -1,0 +1,20 @@
+import React, { useState, useContext, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import FirebaseContext from "../context/firebase";
+const Login = () => {
+  const navigate = useNavigate();
+  const { firebase } = useContext(FirebaseContext);
+  const [emailAddress, setEmailAddress] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+  const isInvalid = !password || !emailAddress;
+
+  const handleLogin = () => {};
+
+  useEffect(() => {
+    document.title = "Login - Instagram";
+  }, []);
+  return <div className="container flex mx-auto text-lg">login</div>;
+};
+
+export default Login;
